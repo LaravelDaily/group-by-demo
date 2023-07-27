@@ -43,6 +43,9 @@
                             <a href="{{ route('group-by-multiple-columns-eloquent') }}">Group By Multiple Columns - Eloquent</a>
                         </li>
                         <li>
+                            <a href="{{ route('group-by-multiple-columns-builder') }}">Group By Multiple Columns - Builder</a>
+                        </li>
+                        <li>
                             <a href="{{ route('group-by-multiple-columns-error') }}">Group By Multiple Columns Error - Eloquent</a>
                         </li>
                     </ul>

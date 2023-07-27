@@ -3,17 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use DB;
 
 class GroupByMultipleColumnsEloquent extends Controller
 {
     public function __invoke()
     {
-        $orders = Order::selectRaw(
-            'month(orders.order_time) as month, sum(order_product.quantity) as total_quantity, sum(orders.total) as order_total, count(*) as total_orders, products.name as product_name'
-        )
-            ->join('order_product', 'order_product.order_id', '=', 'orders.id')
-            ->join('products', 'order_product.product_id', '=', 'products.id')
-            ->groupByRaw('month(orders.order_time), product_name')
+        // This is not working!!!
+        $orders = Order::query()
+            ->select('id')
+            ->addSelect(DB::raw('month(orders.order_time) as month'))
+            ->addSelect(DB::raw('count(*) as total_orders'))
+            ->addSelect(DB::raw('sum(total) as order_total'))
+            ->with('products')
+            ->withAggregate('products', 'name')
+            ->groupByRaw('month(orders.order_time)')
+            ->groupBy('products_name')
             ->orderBy('month')
             ->orderBy('total_orders', 'desc')
             ->get();

@@ -5,6 +5,7 @@ use App\Http\Controllers\GroupByAggregateFunctionsController;
 use App\Http\Controllers\GroupByAggregateWithCalculationsController;
 use App\Http\Controllers\GroupByAndOrderRelatedColumnControllerWithEloquent;
 use App\Http\Controllers\GroupByController;
+use App\Http\Controllers\GroupByMultipleColumnsBuilder;
 use App\Http\Controllers\GroupByMultipleColumnsEloquent;
 use App\Http\Controllers\GroupByMultipleColumnsErrorEloquent;
 use App\Http\Controllers\GroupByRawDayWithEloquent;
@@ -43,6 +44,7 @@ Route::get('group-by-and-order-related-column-eloquent', GroupByAndOrderRelatedC
 Route::get('group-by-raw-day-with-eloquent', GroupByRawDayWithEloquent::class)->name('group-by-raw-day-with-eloquent');
 Route::get('group-by-raw-month-with-eloquent', GroupByRawMonthWithEloquent::class)->name('group-by-raw-month-with-eloquent');
 Route::get('group-by-multiple-columns', GroupByMultipleColumnsEloquent::class)->name('group-by-multiple-columns-eloquent');
+Route::get('group-by-multiple-columns-builder', GroupByMultipleColumnsBuilder::class)->name('group-by-multiple-columns-builder');
 Route::get('group-by-multiple-columns-error', GroupByMultipleColumnsErrorEloquent::class)->name('group-by-multiple-columns-error');
 
 
