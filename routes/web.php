@@ -4,6 +4,7 @@ use App\Http\Controllers\GroupByAggregateController;
 use App\Http\Controllers\GroupByAggregateFunctionsController;
 use App\Http\Controllers\GroupByAggregateWithCalculationsController;
 use App\Http\Controllers\GroupByAndOrderRelatedColumnControllerWithEloquent;
+use App\Http\Controllers\GroupByController;
 use App\Http\Controllers\GroupByMultipleColumnsEloquent;
 use App\Http\Controllers\GroupByMultipleColumnsErrorEloquent;
 use App\Http\Controllers\GroupByRawDayWithEloquent;
@@ -32,6 +33,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::get('group-by', GroupByController::class)->name('group-by');
 Route::get('group-by-aggregate', GroupByAggregateController::class)->name('group-by-aggregate');
 Route::get('group-by-aggregate-functions', GroupByAggregateFunctionsController::class)->name('group-by-aggregate-functions');
 Route::get('group-by-aggregate-calculations', GroupByAggregateWithCalculationsController::class)->name('group-by-aggregate-with-calculations');

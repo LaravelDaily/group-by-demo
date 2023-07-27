@@ -12,8 +12,8 @@ class GroupByRelatedColumnController extends Controller
             ->selectRaw(
                 'users.name as user_name, sum(orders.total) as total, count(order_product.product_id) as total_products'
             )
-            ->join('users', 'user_id', '=', 'users.id')
-            ->join('order_product', 'order_id', '=', 'orders.id')
+            ->join('users', 'orders.user_id', '=', 'users.id')
+            ->join('order_product', 'order_product.order_id', '=', 'orders.id')
             ->groupBy('user_name')
             ->get();
 

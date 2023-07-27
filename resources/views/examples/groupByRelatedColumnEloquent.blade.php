@@ -21,7 +21,7 @@
                         @foreach ($orders as $order)
                             <tr>
                                 <td class="border px-4 py-2">{{ $order->user_name }}</td>
-                                <td class="border px-4 py-2">${{ number_format($order->order_total, 2) }}</td>
+                                <td class="border px-4 py-2">${{ number_format($order->order_total / 100, 2) }}</td>
                                 <td class="border px-4 py-2">{{ $order->total_products }}</td>
                             </tr>
                         @endforeach

@@ -13,18 +13,12 @@
                         <thead>
                         <tr>
                             <th class="px-4 py-2">Name</th>
-                            <th class="px-4 py-2">Stock Quantity</th>
-                            <th class="px-4 py-2">Total Products Moved</th>
-                            <th class="px-4 py-2">Products Sold</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($products as $product)
+                        @foreach ($orders as $order)
                             <tr>
-                                <td class="border px-4 py-2">{{ $product->name }}</td>
-                                <td class="border px-4 py-2">{{ $product->stock_quantity }}</td>
-                                <td class="border px-4 py-2">{{ $product->total_quantity }}</td>
-                                <td class="border px-4 py-2">{{ $product->total_quantity - $product->stock_quantity }}</td>
+                                <td class="border px-4 py-2">{{ $order->user->name }}</td>
                             </tr>
                         @endforeach
                         </tbody>

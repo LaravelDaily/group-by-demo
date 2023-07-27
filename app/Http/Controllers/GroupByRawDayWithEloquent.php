@@ -11,7 +11,7 @@ class GroupByRawDayWithEloquent extends Controller
         $orders = Order::selectRaw(
             'day(orders.order_time) as day, sum(order_product.quantity) as total_quantity, sum(orders.total) as order_total, count(*) as total_orders'
         )
-            ->join('order_product', 'order_id', '=', 'orders.id')
+            ->join('order_product', 'order_product.order_id', '=', 'orders.id')
             ->groupByRaw('day(orders.order_time)')
             ->orderBy('day')
             ->orderBy('total_orders', 'desc')

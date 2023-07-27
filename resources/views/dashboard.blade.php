@@ -11,6 +11,9 @@
                 <div class="p-6 text-gray-900">
                     <ul>
                         <li>
+                            <a href="{{ route('group-by') }}">Group By Example</a>
+                        </li>
+                        <li>
                             <a href="{{ route('group-by-aggregate') }}">Group By Aggregate Example</a>
                         </li>
                         <li>

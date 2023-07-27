@@ -19,8 +19,8 @@
                         <tbody>
                         @foreach ($orders as $order)
                             <tr>
-                                <td class="border px-4 py-2">{{ $order->user->name }}</td>
-                                <td class="border px-4 py-2">{{ $order->total }}</td>
+                                <td class="border px-4 py-2">{{ $order->user_name }}</td>
+                                <td class="border px-4 py-2">{{ $order->total_orders }}</td>
                             </tr>
                         @endforeach
                         </tbody>
