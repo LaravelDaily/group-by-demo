@@ -12,7 +12,11 @@ use App\Http\Controllers\GroupByRawDayWithEloquent;
 use App\Http\Controllers\GroupByRawMonthWithEloquent;
 use App\Http\Controllers\GroupByRelatedColumnController;
 use App\Http\Controllers\GroupByRelatedColumnControllerWithEloquent;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\QuestionsController;
+use App\Http\Controllers\TopicController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,6 +50,11 @@ Route::get('group-by-raw-month-with-eloquent', GroupByRawMonthWithEloquent::clas
 Route::get('group-by-multiple-columns', GroupByMultipleColumnsEloquent::class)->name('group-by-multiple-columns-eloquent');
 Route::get('group-by-multiple-columns-builder', GroupByMultipleColumnsBuilder::class)->name('group-by-multiple-columns-builder');
 Route::get('group-by-multiple-columns-error', GroupByMultipleColumnsErrorEloquent::class)->name('group-by-multiple-columns-error');
+
+Route::get('questions-list-groupped-by-topic', QuestionsController::class)->name('questions-list-groupped-by-topic');
+Route::get('topics-by-name', TopicController::class)->name('topics-by-name');
+Route::get('users-by-age', UsersController::class)->name('users-by-age');
+Route::get('orders-dashboard', OrderController::class)->name('orders-dashboard');
 
 
 Route::middleware('auth')->group(function () {

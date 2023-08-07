@@ -48,6 +48,18 @@
                         <li>
                             <a href="{{ route('group-by-multiple-columns-error') }}">Group By Multiple Columns Error - Eloquent</a>
                         </li>
+                        <li>
+                            <a href="{{ route('questions-list-groupped-by-topic') }}">Questions groupped by Topic</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('topics-by-name') }}">Topics By Name</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('users-by-age') }}">Users by Age</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('orders-dashboard') }}">Orders Dashboard</a>
+                        </li>
                     </ul>
                 </div>
             </div>

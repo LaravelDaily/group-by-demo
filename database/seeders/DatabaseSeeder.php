@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         if (app()->environment('local')) {
             $this->call(OrderSeeder::class);
             $this->call(ProductSeeder::class);
+            $this->call(QuestionSeeder::class);
         }
     }
 }
