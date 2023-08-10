@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ActiveAndInactiveUsersController;
+use App\Http\Controllers\EmployeeTimesheetController;
 use App\Http\Controllers\GroupByAggregateController;
 use App\Http\Controllers\GroupByAggregateFunctionsController;
 use App\Http\Controllers\GroupByAggregateWithCalculationsController;
@@ -13,6 +15,8 @@ use App\Http\Controllers\GroupByRawMonthWithEloquent;
 use App\Http\Controllers\GroupByRelatedColumnController;
 use App\Http\Controllers\GroupByRelatedColumnControllerWithEloquent;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrderReportsController;
+use App\Http\Controllers\OrdersByWeekController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionsController;
 use App\Http\Controllers\TopicController;
@@ -55,6 +59,11 @@ Route::get('questions-list-groupped-by-topic', QuestionsController::class)->name
 Route::get('topics-by-name', TopicController::class)->name('topics-by-name');
 Route::get('users-by-age', UsersController::class)->name('users-by-age');
 Route::get('orders-dashboard', OrderController::class)->name('orders-dashboard');
+
+Route::get('active-and-inactive-users', ActiveAndInactiveUsersController::class)->name('active-and-inactive-users');
+Route::get('employee-timesheet-report', EmployeeTimesheetController::class)->name('employee-timesheet-report');
+Route::get('orders-by-week-collection', OrdersByWeekController::class)->name('orders-by-week-collection');
+Route::get('order-reports', OrderReportsController::class)->name('order-reports');
 
 
 Route::middleware('auth')->group(function () {

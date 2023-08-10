@@ -60,6 +60,18 @@
                         <li>
                             <a href="{{ route('orders-dashboard') }}">Orders Dashboard</a>
                         </li>
+                        <li>
+                            <a href="{{ route('active-and-inactive-users') }}">Active and inactive users count</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('employee-timesheet-report') }}">Employee Timesheet Report</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('orders-by-week-collection') }}">Orders grouped by week - collection</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('order-reports') }}">Order Reports - Collections and Database</a>
+                        </li>
                     </ul>
                 </div>
             </div>
