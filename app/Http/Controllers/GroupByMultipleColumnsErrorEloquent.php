@@ -8,6 +8,7 @@ class GroupByMultipleColumnsErrorEloquent extends Controller
 {
     public function __invoke()
     {
+        // !!! This will throw an error
         $orders = Order::selectRaw(
             'month(orders.order_time) as month, sum(order_product.quantity) as total_quantity, sum(orders.total) as order_total, count(*) as total_orders, products.name as product_name'
         )
