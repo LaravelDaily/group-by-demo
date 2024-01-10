@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class GroupByRawDayWithEloquent extends Controller
 {
-    // https://laraveldaily.com/lesson/laravel-groupby/group-by-raw-expression
     public function __invoke()
     {
         $orders = Order::selectRaw(

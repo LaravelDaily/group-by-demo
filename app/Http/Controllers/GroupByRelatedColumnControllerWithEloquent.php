@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class GroupByRelatedColumnControllerWithEloquent extends Controller
 {
-    // https://laraveldaily.com/lesson/laravel-groupby/group-by-multiple-tables
     public function __invoke()
     {
         $orders = Order::selectRaw(

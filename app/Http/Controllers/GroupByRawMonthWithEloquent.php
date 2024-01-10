@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class GroupByRawMonthWithEloquent extends Controller
 {
-    // https://laraveldaily.com/lesson/laravel-groupby/group-by-order-by-multiple-columns
     public function __invoke()
     {
         $orders = Order::selectRaw(
